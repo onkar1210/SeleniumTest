@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <parameter name="browser" value="edge"></parameter>
-    <test verbose="2" preserve-order="true" name="RediffSiteCheck">
+    <listeners>
+        <listener class-name="RetryFailedTestCases.Transformation"></listener>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="FillTheFormValues">
         <classes>
-            <class name="StockIndicesDropdownTest"></class>
+            <class name="FillTheFormTest"></class>
+            <class name="BrokenLinksTest"></class>
         </classes>
     </test>
 </suite>
